@@ -1,0 +1,77 @@
+╔══════════════════════════════════════════════════════════════╗
+║        🎯 CTRL + CLICK - TRADUÇÃO INSTANTÂNEA                ║
+╚══════════════════════════════════════════════════════════════╝
+
+🎉 Agora é só segurar Ctrl e clicar na linha de texto!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📦 PRIMEIRO: INSTALAR DEPENDÊNCIAS
+
+   npm install
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 EXECUTE:
+
+   npm start
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 COMO USAR:
+
+   1. Segure a tecla Ctrl
+   2. Clique na linha de texto que quer traduzir
+   3. A tradução aparece no overlay!
+
+   Simples assim! Não precisa selecionar nada!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎮 EXEMPLO NO JOGO:
+
+   Você vê uma mensagem: "Hello, how are you?"
+
+   1. Segure Ctrl
+   2. Clique em cima da linha
+   3. Veja no overlay: "Olá, como você está?"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚙️ COMO FUNCIONA:
+
+   • Quando você segura Ctrl, o modo de captura é ativado
+   • Ao clicar, captura a área ao redor do click
+   • Usa OCR online para reconhecer o texto
+   • Traduz automaticamente
+   • Mostra no overlay
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✉️ PARA ENVIAR MENSAGENS:
+
+   1. Clique no botão "✉️ Escrever"
+   2. Digite em português
+   3. Veja tradução em inglês
+   4. Copie e cole no jogo
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 DICAS:
+
+   ✅ Funciona com qualquer texto na tela
+   ✅ Não precisa selecionar
+   ✅ Não precisa copiar
+   ✅ Apenas Ctrl + Click!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️ IMPORTANTE:
+
+   • Requer internet (usa OCR online)
+   • Funciona melhor com texto claro
+   • Pode demorar 1-2 segundos para processar
+
+╚══════════════════════════════════════════════════════════════╝
+
+EXECUTE: npm install && npm start

@@ -1,0 +1,69 @@
+╔══════════════════════════════════════════════════════════════╗
+║           ✅ ATALHO SIMPLIFICADO - CTRL+C                    ║
+╚══════════════════════════════════════════════════════════════╝
+
+🎉 Agora é só Ctrl+C para traduzir! Muito mais simples!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 EXECUTE:
+
+   npm start
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⌨️ ATALHOS SIMPLIFICADOS:
+
+   Ctrl+C        →  Traduzir texto selecionado (EN→PT)
+   Ctrl+Alt      →  Traduzir e colar (PT→EN)
+   Ctrl+Shift+T  →  Mostrar/ocultar overlay
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 COMO USAR:
+
+   RECEBER MENSAGENS (EN→PT):
+   1. Selecione o texto em inglês
+   2. Ctrl+C (copiar)
+   3. Tradução aparece no overlay automaticamente!
+
+   ENVIAR MENSAGENS (PT→EN):
+   1. Clique "✉️ Escrever"
+   2. Digite em português
+   3. Veja tradução em inglês
+   4. Copie e cole no jogo
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎮 EXEMPLO NO JOGO:
+
+   Alguém escreve: "Hello, how are you?"
+   
+   1. Selecione o texto
+   2. Ctrl+C
+   3. Veja no overlay: "Olá, como você está?"
+   
+   Simples assim! 🎉
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 VANTAGENS:
+
+   ✅ Atalho que você já conhece (Ctrl+C)
+   ✅ Não precisa decorar novos atalhos
+   ✅ Funciona em qualquer aplicação
+   ✅ Tradução instantânea
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 FLUXO COMPLETO:
+
+   RECEBER:
+   Selecione → Ctrl+C → Vê tradução
+
+   ENVIAR:
+   Clique "Escrever" → Digite → Copie → Cole no jogo
+
+╚══════════════════════════════════════════════════════════════╝
+
+EXECUTE: npm start

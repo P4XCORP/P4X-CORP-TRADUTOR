@@ -1,0 +1,95 @@
+╔══════════════════════════════════════════════════════════════╗
+║        🎮 TRADUTOR EM TEMPO REAL PARA JOGOS                  ║
+╚══════════════════════════════════════════════════════════════╝
+
+✅ NOVA FUNCIONALIDADE: CAPTURA AUTOMÁTICA EM TEMPO REAL!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📦 PRIMEIRO: INSTALAR NOVA DEPENDÊNCIA
+
+   npm install
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 COMO USAR NO JOGO:
+
+   1. Execute o tradutor:
+      npm start
+
+   2. Abra seu jogo
+
+   3. Pressione: Ctrl + Shift + A
+
+   4. Arraste para selecionar a ÁREA DO CHAT
+      (Onde aparecem as mensagens)
+
+   5. Solte o mouse
+
+   6. PRONTO! Tradução automática ativa! 🎉
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 O QUE ACONTECE:
+
+   • A área selecionada é capturada a cada 2 segundos
+   • Texto novo é reconhecido automaticamente (OCR)
+   • Tradução aparece no overlay instantaneamente
+   • Só traduz texto NOVO (não repete)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⏹️ PARA PARAR:
+
+   • Pressione ESC
+   • OU clique no botão ⏹️ no overlay
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 DICAS PARA MELHOR RESULTADO:
+
+   ✓ Selecione APENAS a área do chat (não a tela toda)
+   ✓ Área com texto claro e legível
+   ✓ Evite áreas com muita animação
+   ✓ Modo janela funciona melhor que tela cheia
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 STATUS NO OVERLAY:
+
+   🎥 Captura ativa     → Funcionando
+   Traduzindo...        → Processando novo texto
+   ✅ Captura ativa     → Aguardando novo texto
+   Captura parada       → Parado
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⌨️ ATALHOS:
+
+   Ctrl+Shift+C  →  Traduzir texto selecionado (manual)
+   Ctrl+Shift+A  →  Selecionar área para captura automática
+   Ctrl+Shift+T  →  Mostrar/ocultar overlay
+   ESC           →  Parar captura automática
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎮 EXEMPLO PRÁTICO:
+
+   Você está jogando e quer traduzir o chat:
+
+   1. Ctrl+Shift+A
+   2. Arraste sobre a área do chat
+   3. Solte
+   4. Jogue normalmente!
+   5. Todas as mensagens novas serão traduzidas automaticamente
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️ IMPORTANTE:
+
+   • Requer permissão para capturar tela
+   • Pode pedir permissão de administrador
+   • Requer internet para traduzir
+   • OCR demora mais na primeira vez (download)
+
+╚══════════════════════════════════════════════════════════════╝

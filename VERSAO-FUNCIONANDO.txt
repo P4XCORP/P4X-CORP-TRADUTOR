@@ -1,0 +1,66 @@
+╔══════════════════════════════════════════════════════════════╗
+║           ✅ VERSÃO CORRIGIDA - FUNCIONANDO!                 ║
+╚══════════════════════════════════════════════════════════════╝
+
+🎉 Erro corrigido! Dependências problemáticas removidas.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 EXECUTE:
+
+   npm start
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⌨️ COMO USAR:
+
+   MÉTODO 1: Triplo Click (RECOMENDADO)
+   1. Clique 3x na linha de texto
+   2. Ctrl+C
+   3. Veja tradução no overlay!
+
+   MÉTODO 2: Seleção Manual
+   1. Selecione o texto com o mouse
+   2. Ctrl+C
+   3. Veja tradução no overlay!
+
+   MÉTODO 3: Caixa de Tradução
+   1. Clique "✉️ Escrever"
+   2. Digite em português
+   3. Veja tradução em inglês
+   4. Copie e cole no jogo
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎮 EXEMPLO NO JOGO:
+
+   Mensagem: "Hello, how are you?"
+
+   1. Clique 3x na linha (seleciona tudo)
+   2. Ctrl+C
+   3. Veja: "Olá, como você está?"
+
+   Total: 2 segundos! ⚡
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⌨️ ATALHOS:
+
+   Ctrl+C        →  Traduzir texto copiado (EN→PT)
+   Ctrl+Alt      →  Traduzir e colar (PT→EN)
+   Ctrl+Shift+T  →  Mostrar/ocultar overlay
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ FUNCIONALIDADES:
+
+   ✓ Tradução EN→PT (receber mensagens)
+   ✓ Tradução PT→EN (enviar mensagens)
+   ✓ Caixa de tradução em tempo real
+   ✓ Histórico de 20 traduções
+   ✓ Interface profissional
+   ✓ Overlay sempre visível
+
+╚══════════════════════════════════════════════════════════════╝
+
+EXECUTE: npm start

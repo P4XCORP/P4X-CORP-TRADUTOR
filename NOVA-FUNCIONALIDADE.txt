@@ -1,0 +1,95 @@
+╔══════════════════════════════════════════════════════════════╗
+║        ✅ CAIXA DE TRADUÇÃO ADICIONADA!                      ║
+╚══════════════════════════════════════════════════════════════╝
+
+🎉 Agora você tem uma caixa de texto igual ao Google Translate!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 EXECUTE NOVAMENTE:
+
+   npm start
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✉️ NOVA FUNCIONALIDADE: CAIXA DE TRADUÇÃO
+
+   1. Clique no botão "✉️ Escrever" no overlay
+   2. Digite em PORTUGUÊS na caixa superior
+   3. A tradução em INGLÊS aparece automaticamente embaixo
+   4. Clique em "Copiar" ou "Copiar e Fechar"
+   5. Cole no jogo com Ctrl+V
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 INTERFACE ATUALIZADA:
+
+   Botões no overlay:
+
+   📋 EN→PT      - Traduzir texto recebido
+   ✉️ Escrever   - Abre caixa de tradução PT→EN
+   📷 Área       - Captura automática
+   🗑️            - Limpar histórico
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 COMO FUNCIONA A CAIXA:
+
+   ┌─────────────────────────────────┐
+   │ ✉️ Escrever Mensagem (PT→EN)   │
+   ├─────────────────────────────────┤
+   │ Digite em português...          │
+   │ Olá, tudo bem?                  │
+   ├─────────────────────────────────┤
+   │           ↓                     │
+   ├─────────────────────────────────┤
+   │ Hello, how are you?             │
+   ├─────────────────────────────────┤
+   │ [📋 Copiar] [✅ Copiar e Fechar]│
+   └─────────────────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 VANTAGENS:
+
+   ✅ Vê a tradução ANTES de enviar
+   ✅ Pode editar o texto em português
+   ✅ Tradução em tempo real (enquanto digita)
+   ✅ Copia com um clique
+   ✅ Interface igual ao Google Translate
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⌨️ ATALHOS CONTINUAM FUNCIONANDO:
+
+   Ctrl+Shift+C  →  Traduzir texto selecionado (EN→PT)
+   Ctrl+Alt      →  Traduzir e colar rápido (PT→EN)
+   Ctrl+Shift+A  →  Capturar área em tempo real
+   Ctrl+Shift+T  →  Mostrar/ocultar overlay
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎮 EXEMPLO DE USO:
+
+   SITUAÇÃO: Você quer pedir ajuda no jogo
+
+   1. Clique em "✉️ Escrever"
+   2. Digite: "Alguém pode me ajudar com essa quest?"
+   3. Vê embaixo: "Can someone help me with this quest?"
+   4. Clica em "Copiar"
+   5. Vai no chat do jogo
+   6. Ctrl+V para colar
+   7. Enter para enviar!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔧 CORREÇÕES:
+
+   ✅ Captura de área corrigida (logs detalhados)
+   ✅ Caixa de tradução adicionada
+   ✅ Interface mais intuitiva
+   ✅ Botões reorganizados
+
+╚══════════════════════════════════════════════════════════════╝
+
+EXECUTE: npm start

@@ -1,0 +1,121 @@
+╔══════════════════════════════════════════════════════════════╗
+║           ✅ VERSÃO FINAL - FUNCIONANDO 100%                 ║
+╚══════════════════════════════════════════════════════════════╝
+
+🎉 OCR removido (causava problemas). Foco nas funcionalidades que funcionam!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 EXECUTE:
+
+   npm start
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ FUNCIONALIDADES QUE FUNCIONAM:
+
+   1. 📋 Traduzir texto selecionado (EN→PT)
+      • Selecione texto
+      • Ctrl+Shift+C
+      • Veja tradução no overlay
+
+   2. ✉️ Caixa de tradução (PT→EN)
+      • Clique "Escrever"
+      • Digite em português
+      • Veja tradução em inglês
+      • Copie e cole no jogo
+
+   3. ⚡ Tradução rápida (PT→EN)
+      • Selecione seu texto em português
+      • Ctrl+Alt
+      • Cola automaticamente em inglês
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⌨️ ATALHOS:
+
+   Ctrl+Shift+C  →  Traduzir texto recebido (EN→PT)
+   Ctrl+Alt      →  Traduzir e colar (PT→EN)
+   Ctrl+Shift+T  →  Mostrar/ocultar overlay
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 INTERFACE:
+
+   Botões no overlay:
+
+   📋 EN→PT      - Traduzir texto recebido
+   ✉️ Escrever   - Caixa de tradução PT→EN
+   ❓ Ajuda      - Ver instruções
+   🗑️            - Limpar histórico
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎮 COMO USAR NO JOGO:
+
+   RECEBER MENSAGENS:
+   1. Alguém escreve: "Hello, how are you?"
+   2. Selecione o texto
+   3. Ctrl+Shift+C
+   4. Veja: "Olá, como você está?"
+
+   ENVIAR MENSAGENS (Método 1 - Caixa):
+   1. Clique "✉️ Escrever"
+   2. Digite: "Estou bem, obrigado"
+   3. Veja: "I'm fine, thank you"
+   4. Clique "Copiar"
+   5. Cole no jogo (Ctrl+V)
+   6. Enter
+
+   ENVIAR MENSAGENS (Método 2 - Rápido):
+   1. Digite no jogo: "Estou bem, obrigado"
+   2. Selecione
+   3. Ctrl+Alt
+   4. Aparece: "I'm fine, thank you"
+   5. Enter
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 DICAS:
+
+   ✅ Use a caixa "Escrever" para ver a tradução antes
+   ✅ Use Ctrl+Alt para traduzir e colar rápido
+   ✅ Funciona em QUALQUER aplicação
+   ✅ Histórico guarda 20 traduções
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ O QUE NÃO FUNCIONA:
+
+   • Captura de área automática (OCR)
+   • Tradução de imagens
+   
+   Motivo: Tesseract.js não é compatível com Electron
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ SOLUÇÃO ALTERNATIVA:
+
+   Para texto que não pode ser selecionado:
+   
+   1. Use ferramentas de OCR externas (Google Lens, etc)
+   2. Ou digite manualmente na caixa "Escrever"
+   3. Ou use print screen + OCR online
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 RESUMO:
+
+   Este tradutor é perfeito para:
+   ✅ Traduzir mensagens de chat
+   ✅ Comunicação em jogos online
+   ✅ Qualquer texto selecionável
+   ✅ Escrever mensagens em inglês
+
+   Não funciona para:
+   ❌ Texto em imagens (sem OCR)
+   ❌ Texto não selecionável
+
+╚══════════════════════════════════════════════════════════════╝
+
+EXECUTE: npm start

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Criar Ícone - Tradutor Pro</title>
+  <style>
+    body {
+      background: #1a1a1a;
+      color: #ccc;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+      text-align: center;
+    }
+    
+    canvas {
+      border: 2px solid #333;
+      margin: 20px;
+      background: #0a0a0a;
+    }
+    
+    button {
+      background: #2a2a2a;
+      border: 1px solid #3a3a3a;
+      color: #ccc;
+      padding: 12px 24px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+      margin: 10px;
+    }
+    
+    button:hover {
+      background: #3a3a3a;
+    }
+    
+    .info {
+      background: #0f0f0f;
+      border: 1px solid #2a2a2a;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+      border-radius: 8px;
+      text-align: left;
+    }
+    
+    h1 { color: #fff; }
+    h3 { color: #999; margin-top: 20px; }
+    code { background: #0a0a0a; padding: 2px 6px; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>Gerador de Ícone - Tradutor Pro</h1>
+  
+  <div class="info">
+    <h3>Instruções:</h3>
+    <ol>
+      <li>Clique em "Gerar Ícone 256x256"</li>
+      <li>Clique com botão direito na imagem</li>
+      <li>Salvar como: <code>icon-256.png</code></li>
+      <li>Use um conversor online para criar .ICO:
+        <ul>
+          <li><a href="https://www.icoconverter.com/" target="_blank">icoconverter.com</a></li>
+          <li><a href="https://convertio.co/png-ico/" target="_blank">convertio.co</a></li>
+        </ul>
+      </li>
+      <li>Salve como <code>icon.ico</code> nesta pasta (build/)</li>
+    </ol>
+  </div>
+  
+  <button onclick="generateIcon(256)">Gerar Ícone 256x256</button>
+  <button onclick="generateIcon(512)">Gerar Ícone 512x512</button>
+  <button onclick="generateIcon(1024)">Gerar Ícone 1024x1024</button>
+  
+  <div id="output"></div>
+
+  <script>
+    function generateIcon(size) {
+      const canvas = document.createElement('canvas');
+      canvas.width = size;
+      canvas.height = size;
+      const ctx = canvas.getContext('2d');
+      
+      const scale = size / 512;
+      ctx.scale(scale, scale);
+      
+      // Background
+      ctx.fillStyle = '#0a0a0a';
+      ctx.fillRect(0, 0, 512, 512);
+      
+      // Outer glow
+      ctx.strokeStyle = '#1a1a1a';
+      ctx.lineWidth = 40;
+      ctx.globalAlpha = 0.3;
+      ctx.beginPath();
+      ctx.arc(256, 256, 180, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+      
+      // Main circle
+      ctx.fillStyle = '#0f0f0f';
+      ctx.beginPath();
+      ctx.arc(256, 256, 160, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = '#2a2a2a';
+      ctx.lineWidth = 4;
+      ctx.stroke();
+      
+      // Translation arrows
+      ctx.save();
+      ctx.translate(256, 256);
+      
+      // Left arrow
+      ctx.fillStyle = '#666';
+      ctx.globalAlpha = 0.8;
+      ctx.beginPath();
+      ctx.moveTo(-80, -40);
+      ctx.lineTo(-40, -40);
+      ctx.lineTo(-40, -60);
+      ctx.lineTo(0, -30);
+      ctx.lineTo(-40, 0);
+      ctx.lineTo(-40, -20);
+      ctx.lineTo(-80, -20);
+      ctx.closePath();
+      ctx.fill();
+      
+      // Right arrow
+      ctx.fillStyle = '#999';
+      ctx.globalAlpha = 0.9;
+      ctx.beginPath();
+      ctx.moveTo(80, 40);
+      ctx.lineTo(40, 40);
+      ctx.lineTo(40, 60);
+      ctx.lineTo(0, 30);
+      ctx.lineTo(40, 0);
+      ctx.lineTo(40, 20);
+      ctx.lineTo(80, 20);
+      ctx.closePath();
+      ctx.fill();
+      ctx.globalAlpha = 1;
+      
+      // Center dividers
+      ctx.strokeStyle = '#333';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(-10, -50);
+      ctx.lineTo(-10, 50);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(10, -50);
+      ctx.lineTo(10, 50);
+      ctx.stroke();
+      
+      ctx.restore();
+      
+      // Letter T
+      ctx.fillStyle = '#ccc';
+      ctx.font = 'bold 120px Arial, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('T', 256, 190);
+      
+      // Letter P
+      ctx.fillStyle = '#666';
+      ctx.font = '300 80px Arial, sans-serif';
+      ctx.fillText('P', 256, 330);
+      
+      // Accent line
+      ctx.strokeStyle = '#1a1a1a';
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.moveTo(140, 256);
+      ctx.lineTo(372, 256);
+      ctx.stroke();
+      
+      // Corner accents
+      ctx.strokeStyle = '#2a2a2a';
+      ctx.lineWidth = 4;
+      
+      // Top-left
+      ctx.beginPath();
+      ctx.moveTo(100, 140);
+      ctx.lineTo(100, 100);
+      ctx.lineTo(140, 100);
+      ctx.stroke();
+      
+      // Top-right
+      ctx.beginPath();
+      ctx.moveTo(412, 140);
+      ctx.lineTo(412, 100);
+      ctx.lineTo(372, 100);
+      ctx.stroke();
+      
+      // Bottom-left
+      ctx.beginPath();
+      ctx.moveTo(100, 372);
+      ctx.lineTo(100, 412);
+      ctx.lineTo(140, 412);
+      ctx.stroke();
+      
+      // Bottom-right
+      ctx.beginPath();
+      ctx.moveTo(412, 372);
+      ctx.lineTo(412, 412);
+      ctx.lineTo(372, 412);
+      ctx.stroke();
+      
+      // Display
+      const output = document.getElementById('output');
+      output.innerHTML = '';
+      
+      const img = document.createElement('canvas');
+      img.width = size;
+      img.height = size;
+      img.style.maxWidth = '400px';
+      img.style.height = 'auto';
+      const imgCtx = img.getContext('2d');
+      imgCtx.drawImage(canvas, 0, 0);
+      
+      output.appendChild(img);
+      
+      const info = document.createElement('p');
+      info.textContent = `Ícone ${size}x${size} gerado! Clique com botão direito e salve.`;
+      info.style.color = '#999';
+      output.appendChild(info);
+    }
+  </script>
+</body>
+</html>

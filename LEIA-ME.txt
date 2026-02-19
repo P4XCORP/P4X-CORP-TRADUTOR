@@ -1,0 +1,124 @@
+╔════════════════════════════════════════════════════════════╗
+║                TRADUTOR PRO v2.0 - by P4X                  ║
+║                   Tradutor Overlay                         ║
+╚════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────┐
+│ COMO USAR                                                   │
+└─────────────────────────────────────────────────────────────┘
+
+1. Execute o programa (TradutorPro.exe)
+2. Uma janela pequena aparecerá no canto superior direito
+3. Copie qualquer texto (Ctrl+C) de qualquer lugar
+4. A tradução aparece automaticamente na janela!
+
+┌─────────────────────────────────────────────────────────────┐
+│ RECURSOS                                                    │
+└─────────────────────────────────────────────────────────────┘
+
+✓ TRADUÇÃO AUTOMÁTICA
+  Copie texto e veja a tradução instantaneamente
+
+✓ MODO ESCREVER
+  Clique em "Escrever" para compor mensagens
+  Digite em um idioma, veja tradução em outro
+  Copie e cole onde quiser
+
+✓ CONFIGURAÇÃO
+  Clique em "Config" para escolher idiomas
+  - Receber: idioma que você recebe → idioma que quer ver
+  - Enviar: idioma que você escreve → idioma que quer enviar
+
+✓ 18+ IDIOMAS
+  Português, Inglês, Espanhol, Francês, Alemão, Italiano,
+  Russo, Árabe, Hindi, Japonês, Coreano, Chinês, Turco,
+  Holandês, Polonês, Ucraniano, Tailandês, Vietnamita
+
+┌─────────────────────────────────────────────────────────────┐
+│ ATALHOS DE TECLADO                                          │
+└─────────────────────────────────────────────────────────────┘
+
+Ctrl+C           → Tradução automática (copie qualquer texto)
+Ctrl+Shift+T     → Mostrar/Ocultar janela
+Ctrl+Shift+C     → Forçar tradução do que está copiado
+
+┌─────────────────────────────────────────────────────────────┐
+│ EXEMPLOS DE USO                                             │
+└─────────────────────────────────────────────────────────────┘
+
+JOGOS ONLINE:
+1. Alguém escreve em inglês no chat
+2. Selecione o texto e Ctrl+C
+3. Veja tradução em português
+
+ESCREVER MENSAGEM:
+1. Clique em "Escrever"
+2. Digite em português
+3. Veja tradução em inglês
+4. Clique "Copiar e Fechar"
+5. Cole no jogo/chat
+
+SITES ESTRANGEIROS:
+1. Selecione texto da página
+2. Ctrl+C
+3. Leia tradução
+
+┌─────────────────────────────────────────────────────────────┐
+│ REQUISITOS DO SISTEMA                                       │
+└─────────────────────────────────────────────────────────────┘
+
+• Windows 10 ou 11 (64-bit)
+• 200 MB de espaço em disco
+• Conexão com internet (para traduzir)
+• 4 GB RAM (recomendado)
+
+┌─────────────────────────────────────────────────────────────┐
+│ DICAS                                                       │
+└─────────────────────────────────────────────────────────────┘
+
+• A janela fica sempre por cima de outras janelas
+• Você pode arrastar a janela pela barra superior
+• Clique em "Limpar" para limpar histórico
+• Configurações são salvas automaticamente
+• Funciona com qualquer programa (jogos, navegador, etc)
+
+┌─────────────────────────────────────────────────────────────┐
+│ PROBLEMAS COMUNS                                            │
+└─────────────────────────────────────────────────────────────┘
+
+P: Não está traduzindo
+R: Verifique sua conexão com internet
+
+P: Janela sumiu
+R: Pressione Ctrl+Shift+T para mostrar
+
+P: Antivírus bloqueou
+R: É falso positivo, adicione à lista de exceções
+
+P: Tradução errada
+R: Google Translate pode errar, é automático
+
+┌─────────────────────────────────────────────────────────────┐
+│ INFORMAÇÕES                                                 │
+└─────────────────────────────────────────────────────────────┘
+
+Versão: 2.0.0
+Licença: MIT (Software Livre)
+Desenvolvedor: P4X
+Website: github.com/p4x
+
+Este software é gratuito e de código aberto.
+Usa Google Translate API para traduções.
+
+┌─────────────────────────────────────────────────────────────┐
+│ PRIVACIDADE                                                 │
+└─────────────────────────────────────────────────────────────┘
+
+• Textos são enviados para Google Translate
+• Nenhum dado é armazenado em servidores
+• Configurações ficam apenas no seu computador
+• Não coleta informações pessoais
+
+═══════════════════════════════════════════════════════════════
+
+Aproveite o Tradutor Pro!

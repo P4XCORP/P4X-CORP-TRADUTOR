@@ -1,0 +1,61 @@
+╔══════════════════════════════════════════════════════════════╗
+║                  🌐 TRADUTOR PRO - RESUMO                    ║
+╚══════════════════════════════════════════════════════════════╝
+
+✅ OVERLAY JÁ ESTÁ FUNCIONANDO!
+   (Você vê a janela no canto superior direito)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 COMO TRADUZIR TEXTO:
+
+   1. Selecione qualquer texto (em qualquer programa)
+   2. Pressione: Ctrl + Shift + C
+   3. Veja a tradução no overlay!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📷 COMO CAPTURAR ÁREA DA TELA:
+
+   1. Pressione: Ctrl + Shift + A
+   2. Arraste o mouse sobre o texto
+   3. Solte o mouse
+   4. Aguarde o OCR reconhecer e traduzir
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⌨️  ATALHOS:
+
+   Ctrl + Shift + C  →  Traduzir texto selecionado
+   Ctrl + Shift + A  →  Capturar área (OCR)
+   Ctrl + Shift + T  →  Mostrar/ocultar overlay
+   ESC               →  Cancelar captura
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 TESTE RÁPIDO:
+
+   1. Abra o Notepad (Win+R → notepad)
+   2. Digite: "Hello World"
+   3. Selecione o texto
+   4. Pressione: Ctrl + Shift + C
+   5. Deve aparecer: "Olá Mundo" no overlay
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 DICAS:
+
+   • Funciona em QUALQUER aplicação
+   • Requer internet para traduzir
+   • Histórico guarda 20 traduções
+   • Arraste o overlay para mover
+   • OCR demora mais na primeira vez
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📖 MAIS AJUDA:
+
+   Leia: COMO-USAR.md
+   Leia: TESTE-RAPIDO.md
+
+╚══════════════════════════════════════════════════════════════╝

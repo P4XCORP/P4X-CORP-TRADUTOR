@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>P4X Tradutor</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      overflow: hidden;
+    }
+    
+    .window {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #1a1a1a;
+    }
+    
+    .titlebar {
+      background: #0f0f0f;
+      padding: 8px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #1a1a1a;
+      -webkit-app-region: drag;
+    }
+    
+    .title { 
+      font-size: 10px; 
+      font-weight: 500; 
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .titlebar-buttons {
+      display: flex;
+      gap: 8px;
+      -webkit-app-region: no-drag;
+    }
+    
+    .titlebar-btn {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+    
+    .titlebar-btn:hover { opacity: 1; }
+    .titlebar-btn.close { background: #ff5f56; }
+    .titlebar-btn.minimize { background: #ffbd2e; }
+    
+    .toolbar {
+      background: #0a0a0a;
+      padding: 8px 12px;
+      display: flex;
+      gap: 6px;
+      border-bottom: 1px solid #1a1a1a;
+      -webkit-app-region: no-drag;
+    }
+    
+    .btn {
+      flex: 1;
+      padding: 6px 10px;
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      color: #999;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 10px;
+      font-weight: 500;
+      transition: all 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .btn-lang {
+      flex: 0.5;
+      padding: 6px 8px;
+      background: #0f0f0f;
+      border: 1px solid #2a2a2a;
+      color: #666;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 9px;
+      font-weight: 600;
+      transition: all 0.2s;
+      text-transform: uppercase;
+    }
+    
+    .btn-lang:hover {
+      background: #1a1a1a;
+      color: #999;
+    }
+    
+    .btn-lang.active {
+      background: #2a2a2a;
+      border-color: #3a3a3a;
+      color: #ccc;
+    }
+    
+    .btn:hover {
+      background: #2a2a2a;
+      border-color: #3a3a3a;
+      color: #ccc;
+    }
+    
+    .btn.active {
+      background: #2a2a2a;
+      border-color: #444;
+      color: #fff;
+    }
+    
+    .config-panel {
+      background: #0f0f0f;
+      border-bottom: 1px solid #1a1a1a;
+      padding: 12px;
+      display: none;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    
+    .config-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    
+    .config-group {
+      flex: 1;
+    }
+    
+    .config-label {
+      font-size: 9px;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    
+    select {
+      width: 100%;
+      padding: 6px;
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      color: #ccc;
+      border-radius: 3px;
+      font-size: 10px;
+      cursor: pointer;
+    }
+    
+    select:focus {
+      outline: none;
+      border-color: #3a3a3a;
+    }
+    
+    .translate-box {
+      background: #0f0f0f;
+      border-bottom: 1px solid #1a1a1a;
+      padding: 12px;
+      display: none;
+      max-height: 250px;
+      overflow-y: auto;
+    }
+    
+    .translate-box-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      font-size: 10px;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .close-box {
+      background: none;
+      border: none;
+      color: #666;
+      font-size: 18px;
+      cursor: pointer;
+      padding: 0;
+      line-height: 1;
+    }
+    
+    .close-box:hover { color: #999; }
+    
+    textarea {
+      width: 100%;
+      min-height: 50px;
+      max-height: 80px;
+      background: #0a0a0a;
+      border: 1px solid #1a1a1a;
+      border-radius: 3px;
+      padding: 8px;
+      color: #ccc;
+      font-size: 11px;
+      font-family: inherit;
+      resize: none;
+      margin-bottom: 6px;
+    }
+    
+    textarea:focus {
+      outline: none;
+      border-color: #2a2a2a;
+    }
+    
+    .translate-arrow {
+      text-align: center;
+      color: #333;
+      font-size: 12px;
+      margin: 4px 0;
+    }
+    
+    .output-text {
+      background: #0a0a0a;
+      border: 1px solid #1a1a1a;
+      border-radius: 3px;
+      padding: 8px;
+      min-height: 50px;
+      max-height: 80px;
+      overflow-y: auto;
+      color: #fff;
+      font-size: 11px;
+      margin-bottom: 8px;
+      word-wrap: break-word;
+    }
+    
+    .translate-actions {
+      display: flex;
+      gap: 8px;
+    }
+    
+    .content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px;
+      -webkit-app-region: no-drag;
+    }
+    
+    .content::-webkit-scrollbar { width: 6px; }
+    .content::-webkit-scrollbar-track { background: #0a0a0a; }
+    .content::-webkit-scrollbar-thumb { background: #1a1a1a; border-radius: 3px; }
+    
+    .empty {
+      text-align: center;
+      padding: 40px 16px;
+      color: #333;
+    }
+    
+    .empty-title { 
+      font-size: 11px; 
+      font-weight: 500; 
+      margin-bottom: 6px; 
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .empty-text { 
+      font-size: 10px; 
+      line-height: 1.5; 
+      color: #444;
+    }
+    
+    .card {
+      background: #0f0f0f;
+      border: 1px solid #1a1a1a;
+      border-radius: 3px;
+      padding: 10px;
+      margin-bottom: 6px;
+      animation: slideIn 0.2s ease;
+    }
+    
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      font-size: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .lang { color: #666; font-weight: 500; }
+    .time { color: #333; }
+    
+    .original {
+      font-size: 10px;
+      color: #666;
+      margin-bottom: 5px;
+      padding: 6px;
+      background: #0a0a0a;
+      border-radius: 2px;
+      border-left: 2px solid #1a1a1a;
+    }
+    
+    .translated {
+      font-size: 11px;
+      color: #ccc;
+      font-weight: 400;
+    }
+    
+    .status {
+      background: #0f0f0f;
+      padding: 6px 12px;
+      border-top: 1px solid #1a1a1a;
+      font-size: 9px;
+      color: #444;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="window">
+    <div class="titlebar">
+      <div class="title">Tradutor</div>
+      <div class="titlebar-buttons">
+        <button class="titlebar-btn minimize" onclick="minimizeWindow()"></button>
+        <button class="titlebar-btn close" onclick="window.close()"></button>
+      </div>
+    </div>
+    
+    <div class="toolbar">
+      <button class="btn-lang" id="btn-lang-pt" onclick="changeUILanguage('pt')">PT</button>
+      <button class="btn-lang" id="btn-lang-en" onclick="changeUILanguage('en')">EN</button>
+      <button class="btn-lang" id="btn-lang-es" onclick="changeUILanguage('es')">ES</button>
+      <button class="btn" id="btn-write" onclick="toggleTranslateBox()">Escrever</button>
+      <button class="btn" id="btn-config" onclick="toggleConfig()">Config</button>
+      <button class="btn" id="btn-clear" onclick="clearAll()">Limpar</button>
+    </div>
+    
+    <div class="config-panel" id="config-panel">
+      <div class="config-row">
+        <div class="config-group">
+          <div class="config-label">Receber (Traduzir de)</div>
+          <select id="from-lang">
+            <option value="auto">Auto-detectar</option>
+            <option value="en">Inglês</option>
+            <option value="es">Espanhol</option>
+            <option value="fr">Francês</option>
+            <option value="de">Alemão</option>
+            <option value="it">Italiano</option>
+            <option value="pt">Português</option>
+            <option value="ru">Russo</option>
+            <option value="ar">Árabe</option>
+            <option value="hi">Hindi</option>
+            <option value="ja">Japonês</option>
+            <option value="ko">Coreano</option>
+            <option value="zh-CN">Chinês</option>
+            <option value="tr">Turco</option>
+            <option value="nl">Holandês</option>
+            <option value="pl">Polonês</option>
+            <option value="uk">Ucraniano</option>
+            <option value="th">Tailandês</option>
+            <option value="vi">Vietnamita</option>
+          </select>
+        </div>
+        <div class="config-group">
+          <div class="config-label">Receber (Traduzir para)</div>
+          <select id="to-lang">
+            <option value="pt">Português</option>
+            <option value="en">Inglês</option>
+            <option value="es">Espanhol</option>
+            <option value="fr">Francês</option>
+            <option value="de">Alemão</option>
+            <option value="it">Italiano</option>
+            <option value="ru">Russo</option>
+            <option value="ar">Árabe</option>
+            <option value="hi">Hindi</option>
+            <option value="ja">Japonês</option>
+            <option value="ko">Coreano</option>
+            <option value="zh-CN">Chinês</option>
+            <option value="tr">Turco</option>
+            <option value="nl">Holandês</option>
+            <option value="pl">Polonês</option>
+            <option value="uk">Ucraniano</option>
+            <option value="th">Tailandês</option>
+            <option value="vi">Vietnamita</option>
+          </select>
+        </div>
+      </div>
+      <div class="config-row">
+        <div class="config-group">
+          <div class="config-label">Enviar (Traduzir de)</div>
+          <select id="write-from-lang">
+            <option value="pt">Português</option>
+            <option value="en">Inglês</option>
+            <option value="es">Espanhol</option>
+            <option value="fr">Francês</option>
+            <option value="de">Alemão</option>
+            <option value="it">Italiano</option>
+            <option value="ru">Russo</option>
+            <option value="ar">Árabe</option>
+            <option value="hi">Hindi</option>
+            <option value="ja">Japonês</option>
+            <option value="ko">Coreano</option>
+            <option value="zh-CN">Chinês</option>
+          </select>
+        </div>
+        <div class="config-group">
+          <div class="config-label">Enviar (Traduzir para)</div>
+          <select id="write-to-lang">
+            <option value="en">Inglês</option>
+            <option value="pt">Português</option>
+            <option value="es">Espanhol</option>
+            <option value="fr">Francês</option>
+            <option value="de">Alemão</option>
+            <option value="it">Italiano</option>
+            <option value="ru">Russo</option>
+            <option value="ar">Árabe</option>
+            <option value="hi">Hindi</option>
+            <option value="ja">Japonês</option>
+            <option value="ko">Coreano</option>
+            <option value="zh-CN">Chinês</option>
+            <option value="tr">Turco</option>
+            <option value="nl">Holandês</option>
+            <option value="pl">Polonês</option>
+            <option value="uk">Ucraniano</option>
+            <option value="th">Tailandês</option>
+            <option value="vi">Vietnamita</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    
+    <div class="translate-box" id="translate-box">
+      <div class="translate-box-header">
+        <span>Escrever Mensagem</span>
+        <button class="close-box" onclick="toggleTranslateBox()">×</button>
+      </div>
+      <textarea id="input-text" placeholder="Digite aqui..." oninput="translateInput()"></textarea>
+      <div class="translate-arrow">↓</div>
+      <div id="output-text" class="output-text">Tradução aparecerá aqui...</div>
+      <div class="translate-actions">
+        <button class="btn" onclick="copyTranslation()">Copiar</button>
+        <button class="btn active" onclick="copyAndClose()">Copiar e Fechar</button>
+      </div>
+    </div>
+    
+    <div class="content" id="content">
+      <div class="empty">
+        <div class="empty-title">Aguardando</div>
+        <div class="empty-text">
+          Copie qualquer texto e a tradução<br>
+          aparecerá aqui automaticamente
+        </div>
+      </div>
+    </div>
+    
+    <div class="status" id="status">Pronto</div>
+  </div>
+
+  <script>
+    const { ipcRenderer } = require('electron');
+    
+    let translateTimeout = null;
+    let uiLang = 'pt'; // Idioma da interface
+    let config = {
+      fromLang: 'auto',
+      toLang: 'pt',
+      writeFromLang: 'pt',
+      writeToLang: 'en'
+    };
+    
+    // Traduções da interface
+    const translations = {
+      pt: {
+        title: 'Tradutor',
+        btnWrite: 'Escrever',
+        btnConfig: 'Config',
+        btnClear: 'Limpar',
+        configReceiveFrom: 'Receber (Traduzir de)',
+        configReceiveTo: 'Receber (Traduzir para)',
+        configSendFrom: 'Enviar (Traduzir de)',
+        configSendTo: 'Enviar (Traduzir para)',
+        writeTitle: 'Escrever Mensagem',
+        writePlaceholder: 'Digite aqui...',
+        writeOutput: 'Tradução aparecerá aqui...',
+        writeTranslating: 'Traduzindo...',
+        btnCopy: 'Copiar',
+        btnCopyClose: 'Copiar e Fechar',
+        emptyTitle: 'Aguardando',
+        emptyText: 'Copie qualquer texto e a tradução<br>aparecerá aqui automaticamente',
+        statusReady: 'Pronto',
+        statusTranslating: 'Traduzindo...',
+        statusTranslated: 'Traduzido',
+        statusCopied: 'Copiado',
+        statusCleared: 'Limpo',
+        statusConfigSaved: 'Configuração salva',
+        statusTypeMessage: 'Digite sua mensagem',
+        autoDetect: 'Auto-detectar'
+      },
+      en: {
+        title: 'Translator',
+        btnWrite: 'Write',
+        btnConfig: 'Config',
+        btnClear: 'Clear',
+        configReceiveFrom: 'Receive (Translate from)',
+        configReceiveTo: 'Receive (Translate to)',
+        configSendFrom: 'Send (Translate from)',
+        configSendTo: 'Send (Translate to)',
+        writeTitle: 'Write Message',
+        writePlaceholder: 'Type here...',
+        writeOutput: 'Translation will appear here...',
+        writeTranslating: 'Translating...',
+        btnCopy: 'Copy',
+        btnCopyClose: 'Copy & Close',
+        emptyTitle: 'Waiting',
+        emptyText: 'Copy any text and the translation<br>will appear here automatically',
+        statusReady: 'Ready',
+        statusTranslating: 'Translating...',
+        statusTranslated: 'Translated',
+        statusCopied: 'Copied',
+        statusCleared: 'Cleared',
+        statusConfigSaved: 'Configuration saved',
+        statusTypeMessage: 'Type your message',
+        autoDetect: 'Auto-detect'
+      },
+      es: {
+        title: 'Traductor',
+        btnWrite: 'Escribir',
+        btnConfig: 'Config',
+        btnClear: 'Limpiar',
+        configReceiveFrom: 'Recibir (Traducir de)',
+        configReceiveTo: 'Recibir (Traducir a)',
+        configSendFrom: 'Enviar (Traducir de)',
+        configSendTo: 'Enviar (Traducir a)',
+        writeTitle: 'Escribir Mensaje',
+        writePlaceholder: 'Escribe aquí...',
+        writeOutput: 'La traducción aparecerá aquí...',
+        writeTranslating: 'Traduciendo...',
+        btnCopy: 'Copiar',
+        btnCopyClose: 'Copiar y Cerrar',
+        emptyTitle: 'Esperando',
+        emptyText: 'Copia cualquier texto y la traducción<br>aparecerá aquí automáticamente',
+        statusReady: 'Listo',
+        statusTranslating: 'Traduciendo...',
+        statusTranslated: 'Traducido',
+        statusCopied: 'Copiado',
+        statusCleared: 'Limpiado',
+        statusConfigSaved: 'Configuración guardada',
+        statusTypeMessage: 'Escribe tu mensaje',
+        autoDetect: 'Auto-detectar'
+      }
+    };
+    
+    function changeUILanguage(lang) {
+      uiLang = lang;
+      localStorage.setItem('uiLang', lang);
+      updateUILanguage();
+      
+      // Atualizar botões ativos
+      document.querySelectorAll('.btn-lang').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(`btn-lang-${lang}`).classList.add('active');
+    }
+    
+    function updateUILanguage() {
+      const t = translations[uiLang];
+      
+      // Atualizar textos
+      document.querySelector('.title').textContent = t.title;
+      document.getElementById('btn-write').textContent = t.btnWrite;
+      document.getElementById('btn-config').textContent = t.btnConfig;
+      document.getElementById('btn-clear').textContent = t.btnClear;
+      
+      // Atualizar labels de config
+      document.querySelectorAll('.config-label')[0].textContent = t.configReceiveFrom;
+      document.querySelectorAll('.config-label')[1].textContent = t.configReceiveTo;
+      document.querySelectorAll('.config-label')[2].textContent = t.configSendFrom;
+      document.querySelectorAll('.config-label')[3].textContent = t.configSendTo;
+      
+      // Atualizar auto-detect
+      document.querySelectorAll('option[value="auto"]').forEach(opt => {
+        opt.textContent = t.autoDetect;
+      });
+      
+      // Atualizar write box
+      document.querySelector('.translate-box-header span').textContent = t.writeTitle;
+      document.getElementById('input-text').placeholder = t.writePlaceholder;
+      
+      const outputText = document.getElementById('output-text').textContent;
+      if (outputText === translations.pt.writeOutput || 
+          outputText === translations.en.writeOutput ||
+          outputText === translations.es.writeOutput) {
+        document.getElementById('output-text').textContent = t.writeOutput;
+      }
+      
+      // Atualizar botões de write
+      const copyBtns = document.querySelectorAll('.translate-actions .btn');
+      if (copyBtns[0]) copyBtns[0].textContent = t.btnCopy;
+      if (copyBtns[1]) copyBtns[1].textContent = t.btnCopyClose;
+      
+      // Atualizar empty state
+      const emptyTitle = document.querySelector('.empty-title');
+      const emptyText = document.querySelector('.empty-text');
+      if (emptyTitle) emptyTitle.textContent = t.emptyTitle;
+      if (emptyText) emptyText.innerHTML = t.emptyText;
+      
+      // Atualizar status
+      const status = document.getElementById('status').textContent;
+      if (status === translations.pt.statusReady || 
+          status === translations.en.statusReady ||
+          status === translations.es.statusReady) {
+        updateStatus(t.statusReady);
+      }
+    }
+    
+    // Carregar idioma da interface salvo
+    const savedUILang = localStorage.getItem('uiLang');
+    if (savedUILang) {
+      uiLang = savedUILang;
+      document.getElementById(`btn-lang-${uiLang}`).classList.add('active');
+    } else {
+      document.getElementById('btn-lang-pt').classList.add('active');
+    }
+    
+    // Carrega config salva
+    const savedConfig = localStorage.getItem('translatorConfig');
+    if (savedConfig) {
+      config = JSON.parse(savedConfig);
+      document.getElementById('from-lang').value = config.fromLang;
+      document.getElementById('to-lang').value = config.toLang;
+      document.getElementById('write-from-lang').value = config.writeFromLang;
+      document.getElementById('write-to-lang').value = config.writeToLang;
+    }
+    
+    // Salva config ao mudar
+    document.querySelectorAll('select').forEach(select => {
+      select.addEventListener('change', () => {
+        config.fromLang = document.getElementById('from-lang').value;
+        config.toLang = document.getElementById('to-lang').value;
+        config.writeFromLang = document.getElementById('write-from-lang').value;
+        config.writeToLang = document.getElementById('write-to-lang').value;
+        localStorage.setItem('translatorConfig', JSON.stringify(config));
+        updateStatus('Configuração salva');
+        setTimeout(() => updateStatus('Pronto'), 2000);
+      });
+    });
+    
+    async function translateText(text, from, to) {
+      try {
+        const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${from}&tl=${to}&dt=t&q=${encodeURIComponent(text)}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        
+        let translated = '';
+        if (data && data[0]) {
+          data[0].forEach(item => {
+            if (item && item[0]) translated += item[0];
+          });
+        }
+        
+        return translated || text;
+      } catch (error) {
+        console.error('Erro:', error);
+        return 'Erro ao traduzir';
+      }
+    }
+    
+    function toggleConfig() {
+      const panel = document.getElementById('config-panel');
+      const btn = document.getElementById('btn-config');
+      const box = document.getElementById('translate-box');
+      
+      if (panel.style.display === 'none' || panel.style.display === '') {
+        panel.style.display = 'block';
+        box.style.display = 'none';
+        btn.classList.add('active');
+        document.getElementById('btn-write').classList.remove('active');
+      } else {
+        panel.style.display = 'none';
+        btn.classList.remove('active');
+      }
+    }
+    
+    function toggleTranslateBox() {
+      const box = document.getElementById('translate-box');
+      const content = document.getElementById('content');
+      const btn = document.getElementById('btn-write');
+      const panel = document.getElementById('config-panel');
+      
+      if (box.style.display === 'none' || box.style.display === '') {
+        box.style.display = 'block';
+        content.style.display = 'none';
+        panel.style.display = 'none';
+        btn.classList.add('active');
+        document.getElementById('btn-config').classList.remove('active');
+        document.getElementById('input-text').focus();
+        updateStatus('Digite sua mensagem');
+      } else {
+        box.style.display = 'none';
+        content.style.display = 'block';
+        btn.classList.remove('active');
+        updateStatus('Pronto');
+      }
+    }
+    
+    async function translateInput() {
+      const inputText = document.getElementById('input-text').value;
+      const outputDiv = document.getElementById('output-text');
+      
+      if (!inputText || inputText.trim().length === 0) {
+        outputDiv.textContent = 'Tradução aparecerá aqui...';
+        return;
+      }
+      
+      if (translateTimeout) clearTimeout(translateTimeout);
+      
+      outputDiv.textContent = 'Traduzindo...';
+      
+      translateTimeout = setTimeout(async () => {
+        const translated = await translateText(inputText.trim(), config.writeFromLang, config.writeToLang);
+        outputDiv.textContent = translated;
+        updateStatus('Traduzido');
+      }, 500);
+    }
+    
+    function copyTranslation() {
+      const outputDiv = document.getElementById('output-text');
+      const text = outputDiv.textContent;
+      
+      if (text && text !== 'Tradução aparecerá aqui...' && text !== 'Traduzindo...') {
+        navigator.clipboard.writeText(text).then(() => {
+          updateStatus('Copiado');
+          setTimeout(() => updateStatus('Pronto'), 2000);
+        });
+      }
+    }
+    
+    function copyAndClose() {
+      copyTranslation();
+      setTimeout(() => {
+        toggleTranslateBox();
+        document.getElementById('input-text').value = '';
+        document.getElementById('output-text').textContent = 'Tradução aparecerá aqui...';
+      }, 300);
+    }
+    
+    function clearAll() {
+      const content = document.getElementById('content');
+      content.innerHTML = `
+        <div class="empty">
+          <div class="empty-title">Aguardando</div>
+          <div class="empty-text">
+            Copie qualquer texto e a tradução<br>
+            aparecerá aqui automaticamente
+          </div>
+        </div>
+      `;
+      updateStatus('Limpo');
+      setTimeout(() => updateStatus('Pronto'), 2000);
+    }
+    
+    function addTranslation(original, translated, detectedLang) {
+      const content = document.getElementById('content');
+      const empty = content.querySelector('.empty');
+      if (empty) empty.remove();
+      
+      const now = new Date();
+      const time = now.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+      
+      const langName = getLangName(detectedLang);
+      
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <div class="card-header">
+          <span class="lang">${langName} → ${getLangName(config.toLang)}</span>
+          <span class="time">${time}</span>
+        </div>
+        <div class="original">${escapeHtml(original)}</div>
+        <div class="translated">${escapeHtml(translated)}</div>
+      `;
+      
+      content.insertBefore(card, content.firstChild);
+      
+      const cards = content.querySelectorAll('.card');
+      if (cards.length > 20) {
+        cards[cards.length - 1].remove();
+      }
+    }
+    
+    function getLangName(code) {
+      const names = {
+        'auto': 'Auto',
+        'pt': 'PT',
+        'en': 'EN',
+        'es': 'ES',
+        'fr': 'FR',
+        'de': 'DE',
+        'it': 'IT',
+        'ru': 'RU',
+        'ar': 'AR',
+        'hi': 'HI',
+        'ja': 'JA',
+        'ko': 'KO',
+        'zh-CN': 'ZH',
+        'tr': 'TR',
+        'nl': 'NL',
+        'pl': 'PL',
+        'uk': 'UK',
+        'th': 'TH',
+        'vi': 'VI'
+      };
+      return names[code] || code.toUpperCase();
+    }
+    
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+    
+    function updateStatus(text) {
+      document.getElementById('status').textContent = text;
+    }
+    
+    function minimizeWindow() {
+      ipcRenderer.send('minimize');
+    }
+    
+    ipcRenderer.on('translate', async (event, text) => {
+      if (!text || text.trim().length === 0) return;
+      
+      console.log('Traduzindo:', text.substring(0, 50));
+      updateStatus('Traduzindo...');
+      
+      const translated = await translateText(text.trim(), config.fromLang, config.toLang);
+      addTranslation(text.trim(), translated, config.fromLang);
+      updateStatus('Traduzido');
+      
+      setTimeout(() => updateStatus('Pronto'), 2000);
+    });
+  </script>
+</body>
+</html>

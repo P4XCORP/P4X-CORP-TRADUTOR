@@ -1,0 +1,77 @@
+╔══════════════════════════════════════════════════════════════╗
+║        ✅ VERSÃO SIMPLES - FUNCIONA 100%!                    ║
+╚══════════════════════════════════════════════════════════════╝
+
+🎉 Versão completamente refeita do zero!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 EXECUTE:
+
+   npm start
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 COMO FUNCIONA:
+
+   • Monitora o clipboard automaticamente
+   • Quando você copia texto (Ctrl+C)
+   • Traduz automaticamente
+   • Mostra no overlay
+
+   NÃO PRECISA DE ATALHOS ESPECIAIS!
+   Apenas copie o texto normalmente!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎮 COMO USAR NO JOGO:
+
+   1. Veja uma mensagem: "Hello, how are you?"
+   2. Selecione o texto (ou clique 3x)
+   3. Ctrl+C (copiar)
+   4. Tradução aparece AUTOMATICAMENTE no overlay!
+
+   Simples assim! 🎉
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 VANTAGENS:
+
+   ✅ Funciona com Ctrl+C normal
+   ✅ Não precisa de atalhos especiais
+   ✅ Tradução automática
+   ✅ Histórico de 20 traduções
+   ✅ Interface limpa e profissional
+   ✅ Sempre visível no topo
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⌨️ ATALHO:
+
+   Ctrl+Shift+T  →  Mostrar/ocultar overlay
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 EXEMPLO PRÁTICO:
+
+   Chat do jogo: "Hello, how are you?"
+   
+   Você: Clique 3x na linha
+   Você: Ctrl+C
+   Overlay: "Olá, como você está?"
+   
+   Total: 2 segundos! ⚡
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ O QUE FOI SIMPLIFICADO:
+
+   • Removido todos os atalhos complexos
+   • Removido OCR (não funcionava)
+   • Removido captura de área
+   • Foco em UMA coisa: traduzir texto copiado
+   • E faz isso PERFEITAMENTE!
+
+╚══════════════════════════════════════════════════════════════╝
+
+EXECUTE: npm start

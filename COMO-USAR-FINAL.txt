@@ -1,0 +1,91 @@
+╔══════════════════════════════════════════════════════════════╗
+║              📋 COMO USAR - GUIA DEFINITIVO                  ║
+╚══════════════════════════════════════════════════════════════╝
+
+✅ O tradutor está funcionando! Aqui está como usar:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 RECEBER MENSAGENS (EN→PT):
+
+   PASSO 1: Selecione o texto
+   • Arraste o mouse sobre o texto OU
+   • Clique 3x na linha (seleciona tudo)
+   
+   PASSO 2: Copie
+   • Pressione Ctrl+C
+   
+   PASSO 3: Veja a tradução
+   • Aparece automaticamente no overlay!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✉️ ENVIAR MENSAGENS (PT→EN):
+
+   PASSO 1: Abra a caixa
+   • Clique no botão "✉️ Escrever"
+   
+   PASSO 2: Digite
+   • Digite sua mensagem em português
+   • Tradução aparece em tempo real embaixo
+   
+   PASSO 3: Copie
+   • Clique "Copiar" ou "Copiar e Fechar"
+   
+   PASSO 4: Cole no jogo
+   • Ctrl+V no chat do jogo
+   • Enter para enviar
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎮 EXEMPLO NO JOGO:
+
+   Situação: Alguém escreve "Hello, how are you?"
+   
+   Você faz:
+   1. Clique 3x na linha "Hello, how are you?"
+   2. Ctrl+C
+   3. Olha no overlay: "Olá, como você está?"
+   
+   Você responde:
+   1. Clique "✉️ Escrever" no overlay
+   2. Digite: "Estou bem, obrigado"
+   3. Vê: "I'm fine, thank you"
+   4. Clique "Copiar"
+   5. Ctrl+V no chat
+   6. Enter
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⌨️ ATALHOS:
+
+   Ctrl+C           →  Copiar e traduzir automaticamente
+   Ctrl+Shift+C     →  Forçar tradução do texto copiado
+   Ctrl+Shift+T     →  Mostrar/ocultar overlay
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 DICAS:
+
+   ✅ Triplo click seleciona a linha inteira
+   ✅ Funciona em QUALQUER aplicação
+   ✅ Histórico guarda 20 traduções
+   ✅ Overlay sempre visível no topo
+   ✅ Tradução em tempo real na caixa
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❓ PROBLEMAS COMUNS:
+
+   P: Cliquei 3x mas não traduziu
+   R: Você precisa copiar depois! (Ctrl+C)
+   
+   P: Não está traduzindo
+   R: Verifique se copiou o texto (Ctrl+C)
+   
+   P: Overlay sumiu
+   R: Pressione Ctrl+Shift+T
+
+╚══════════════════════════════════════════════════════════════╝
+
+RESUMO: Selecione → Ctrl+C → Traduz!

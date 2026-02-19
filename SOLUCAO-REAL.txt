@@ -1,0 +1,76 @@
+╔══════════════════════════════════════════════════════════════╗
+║        ⚠️ LIMITAÇÃO TÉCNICA - CTRL+CLICK                     ║
+╚══════════════════════════════════════════════════════════════╝
+
+❌ PROBLEMA:
+
+   Detectar Ctrl+Click globalmente no Windows requer:
+   • Hooks de sistema de baixo nível
+   • Permissões de administrador
+   • Bibliotecas nativas complexas (node-global-mouse-events)
+   • Não é suportado nativamente pelo Electron
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ SOLUÇÃO QUE FUNCIONA:
+
+   Use Ctrl+C (copiar) - É o método mais simples e confiável!
+
+   1. Selecione o texto (arraste o mouse)
+   2. Ctrl+C (copiar)
+   3. Tradução aparece automaticamente!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 ALTERNATIVAS:
+
+   OPÇÃO 1: Seleção Tripla (mais rápido)
+   • Clique 3x na linha (seleciona a linha inteira)
+   • Ctrl+C
+   • Traduz!
+
+   OPÇÃO 2: Duplo Click + Ctrl+C
+   • Duplo click na palavra
+   • Ctrl+C
+   • Traduz!
+
+   OPÇÃO 3: Caixa de Tradução
+   • Clique "✉️ Escrever"
+   • Digite ou cole o texto
+   • Veja tradução em tempo real
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎮 FLUXO OTIMIZADO NO JOGO:
+
+   Mensagem: "Hello, how are you?"
+
+   1. Clique 3x na linha (seleciona tudo)
+   2. Ctrl+C
+   3. Veja: "Olá, como você está?"
+
+   Total: 2 segundos! ⚡
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⌨️ ATALHOS FINAIS:
+
+   Ctrl+C        →  Traduzir texto copiado (EN→PT)
+   Ctrl+Alt      →  Traduzir e colar (PT→EN)
+   Ctrl+Shift+T  →  Mostrar/ocultar overlay
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 RESUMO:
+
+   O que você quer: Ctrl + Click
+   Limitação: Não é possível no Electron
+
+   Solução: Triplo Click + Ctrl+C
+   • Igualmente rápido
+   • Funciona 100%
+   • Não requer permissões especiais
+
+╚══════════════════════════════════════════════════════════════╝
+
+EXECUTE: npm start

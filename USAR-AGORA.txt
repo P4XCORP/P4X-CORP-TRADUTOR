@@ -1,0 +1,85 @@
+╔══════════════════════════════════════════════════════════════╗
+║        ✅ NOVA FUNCIONALIDADE: ENVIAR MENSAGENS!             ║
+╚══════════════════════════════════════════════════════════════╝
+
+🎉 Agora você pode escrever em PORTUGUÊS e enviar em INGLÊS!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 EXECUTE NOVAMENTE:
+
+   npm start
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📥 RECEBER MENSAGENS (Ler o que outros escrevem):
+
+   1. Alguém escreve em inglês: "Hello, how are you?"
+   2. Você seleciona o texto
+   3. Pressiona: Ctrl + Shift + C
+   4. Vê no overlay: "Olá, como você está?"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📤 ENVIAR MENSAGENS (Escrever para outros):
+
+   1. Você digita em português: "Estou bem, obrigado!"
+   2. Seleciona o texto
+   3. Pressiona: Ctrl + Alt
+   4. O texto vira: "I'm fine, thank you!"
+   5. É colado automaticamente!
+   6. Só pressionar Enter para enviar!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⌨️ ATALHOS PRINCIPAIS:
+
+   📥 Ctrl+Shift+C  →  Ler (EN→PT)
+   📤 Ctrl+Alt      →  Enviar (PT→EN) + Cola automaticamente
+   📷 Ctrl+Shift+A  →  Captura área em tempo real
+   👁️ Ctrl+Shift+T  →  Mostrar/ocultar overlay
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎮 EXEMPLO COMPLETO NO JOGO:
+
+   SITUAÇÃO: Alguém te pergunta "Where are you?"
+
+   1. Seleciona "Where are you?"
+   2. Ctrl+Shift+C
+   3. Overlay mostra: "Onde você está?"
+   
+   4. Você digita no chat: "Estou perto do castelo"
+   5. Seleciona seu texto
+   6. Ctrl+Alt
+   7. Aparece: "I'm near the castle"
+   8. Enter para enviar!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 INTERFACE DO OVERLAY:
+
+   Agora tem 4 botões:
+
+   📋 EN→PT        - Traduzir texto recebido
+   ✉️ PT→EN        - Traduzir para enviar (azul)
+   📷 Área         - Captura automática
+   ⏹️              - Parar captura
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 CORES NO HISTÓRICO:
+
+   Verde  = Mensagens recebidas (EN→PT)
+   Azul   = Mensagens enviadas (PT→EN)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📖 MAIS INFORMAÇÕES:
+
+   Leia: ENVIAR-MENSAGENS.md
+   Leia: ATALHOS-COMPLETOS.txt
+
+╚══════════════════════════════════════════════════════════════╝
+
+EXECUTE: npm start

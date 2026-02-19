@@ -1,0 +1,111 @@
+═══════════════════════════════════════════════════════════
+  COMO FAZER PUSH PARA O GITHUB
+═══════════════════════════════════════════════════════════
+
+REPOSITÓRIO: https://github.com/P4XCORP/P4X-TRADUTOR.git
+
+PASSO 1: INSTALAR GIT
+───────────────────────────────────────────────────────────
+Baixe e instale Git:
+→ https://git-scm.com/download/win
+
+Ou use GitHub Desktop (mais fácil):
+→ https://desktop.github.com/
+
+
+PASSO 2: CONFIGURAR GIT (Primeira vez)
+───────────────────────────────────────────────────────────
+Abra o terminal e execute:
+
+git config --global user.name "P4X"
+git config --global user.email "seu-email@exemplo.com"
+
+
+PASSO 3: INICIALIZAR REPOSITÓRIO
+───────────────────────────────────────────────────────────
+No terminal, na pasta do projeto:
+
+git init
+git add .
+git commit -m "Initial commit - Tradutor Pro v2.0"
+
+
+PASSO 4: CONECTAR AO GITHUB
+───────────────────────────────────────────────────────────
+git remote add origin https://github.com/P4XCORP/P4X-TRADUTOR.git
+git branch -M main
+git push -u origin main
+
+
+PASSO 5: FAZER LOGIN
+───────────────────────────────────────────────────────────
+Quando pedir credenciais:
+- Username: P4XCORP
+- Password: Seu Personal Access Token do GitHub
+
+Para criar token:
+1. GitHub → Settings → Developer settings
+2. Personal access tokens → Tokens (classic)
+3. Generate new token
+4. Marque: repo (full control)
+5. Copie o token gerado
+
+
+MÉTODO ALTERNATIVO: GITHUB DESKTOP
+───────────────────────────────────────────────────────────
+1. Instale GitHub Desktop
+2. File → Add Local Repository
+3. Escolha esta pasta
+4. Publish repository
+5. Nome: P4X-TRADUTOR
+6. Organization: P4XCORP
+7. Clique em Publish
+
+
+ARQUIVOS QUE SERÃO ENVIADOS
+───────────────────────────────────────────────────────────
+✓ src/ (código fonte)
+✓ build/ (recursos de build)
+✓ README.md (documentação)
+✓ LICENSE.txt (licença)
+✓ package.json (configuração)
+✓ .gitignore (arquivos ignorados)
+
+✗ node_modules/ (ignorado)
+✗ dist/ (ignorado)
+✗ TradutorPro-v2.0-Portable/ (ignorado)
+
+
+COMANDOS ÚTEIS
+───────────────────────────────────────────────────────────
+Ver status:
+git status
+
+Adicionar mudanças:
+git add .
+
+Fazer commit:
+git commit -m "Sua mensagem"
+
+Enviar para GitHub:
+git push
+
+Atualizar do GitHub:
+git pull
+
+
+TROUBLESHOOTING
+───────────────────────────────────────────────────────────
+Erro: "repository not found"
+→ Verifique se o repositório existe no GitHub
+→ Crie o repositório em: https://github.com/new
+
+Erro: "authentication failed"
+→ Use Personal Access Token ao invés de senha
+→ Gere em: https://github.com/settings/tokens
+
+Erro: "permission denied"
+→ Verifique se você tem acesso ao repositório P4XCORP
+
+
+═══════════════════════════════════════════════════════════

@@ -1,0 +1,65 @@
+╔══════════════════════════════════════════════════════════════╗
+║           🔧 VERSÃO COM DEBUG - TESTE AGORA                  ║
+╚══════════════════════════════════════════════════════════════╝
+
+📝 O QUE MUDOU:
+
+   ✅ Ctrl+Shift+C agora copia automaticamente o texto
+   ✅ Console de debug abre automaticamente
+   ✅ Logs detalhados de cada etapa
+   ✅ Mensagens de erro claras
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 COMO TESTAR:
+
+   1. Feche o tradutor se estiver aberto
+   
+   2. Execute novamente:
+      npm start
+   
+   3. Duas janelas vão abrir:
+      • Overlay (Tradutor Pro)
+      • DevTools (Console com logs)
+   
+   4. Abra o Notepad:
+      Win+R → notepad → Enter
+   
+   5. Digite:
+      Hello World
+   
+   6. Selecione o texto (arraste o mouse)
+   
+   7. Pressione:
+      Ctrl + Shift + C
+   
+   8. Observe o console DevTools!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 O QUE VOCÊ DEVE VER NO CONSOLE:
+
+   🔤 Ctrl+Shift+C pressionado - Capturando texto...
+   📋 Texto capturado: Hello World...
+   ✅ Enviando para tradução...
+   🔄 Iniciando tradução: Hello World
+   🌐 Chamando API de tradução...
+   📦 Resposta da API recebida
+   ✅ Tradução concluída: Olá Mundo
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ SE DER ERRO:
+
+   • "VAZIO" → Texto não foi selecionado corretamente
+   • "Erro de rede" → Problema de internet/firewall
+   • Nada aparece → Atalho não registrado
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 DICA:
+
+   Mantenha o console DevTools visível enquanto testa.
+   Ele mostra EXATAMENTE o que está acontecendo!
+
+╚══════════════════════════════════════════════════════════════╝

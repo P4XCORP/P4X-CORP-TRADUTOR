@@ -1,0 +1,42 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#0a0a0a" rx="80"/>
+  
+  <!-- Outer glow -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#1a1a1a" stroke-width="40" opacity="0.3"/>
+  
+  <!-- Main circle -->
+  <circle cx="256" cy="256" r="160" fill="#0f0f0f" stroke="#2a2a2a" stroke-width="4"/>
+  
+  <!-- Translation arrows -->
+  <g transform="translate(256, 256)">
+    <!-- Left arrow (incoming) -->
+    <path d="M -80 -40 L -40 -40 L -40 -60 L 0 -30 L -40 0 L -40 -20 L -80 -20 Z" 
+          fill="#666" opacity="0.8"/>
+    
+    <!-- Right arrow (outgoing) -->
+    <path d="M 80 40 L 40 40 L 40 60 L 0 30 L 40 0 L 40 20 L 80 20 Z" 
+          fill="#999" opacity="0.9"/>
+    
+    <!-- Center divider -->
+    <line x1="-10" y1="-50" x2="-10" y2="50" stroke="#333" stroke-width="2"/>
+    <line x1="10" y1="-50" x2="10" y2="50" stroke="#333" stroke-width="2"/>
+  </g>
+  
+  <!-- Letter T (Tradutor) -->
+  <text x="256" y="200" font-family="Arial, sans-serif" font-size="120" font-weight="bold" 
+        fill="#ccc" text-anchor="middle">T</text>
+  
+  <!-- Letter P (Pro) -->
+  <text x="256" y="340" font-family="Arial, sans-serif" font-size="80" font-weight="300" 
+        fill="#666" text-anchor="middle">P</text>
+  
+  <!-- Accent line -->
+  <line x1="140" y1="256" x2="372" y2="256" stroke="#1a1a1a" stroke-width="3"/>
+  
+  <!-- Corner accents -->
+  <path d="M 100 100 L 100 140 M 100 100 L 140 100" stroke="#2a2a2a" stroke-width="4" fill="none"/>
+  <path d="M 412 100 L 412 140 M 412 100 L 372 100" stroke="#2a2a2a" stroke-width="4" fill="none"/>
+  <path d="M 100 412 L 100 372 M 100 412 L 140 412" stroke="#2a2a2a" stroke-width="4" fill="none"/>
+  <path d="M 412 412 L 412 372 M 412 412 L 372 412" stroke="#2a2a2a" stroke-width="4" fill="none"/>
+</svg>

@@ -1,0 +1,40 @@
+{
+  "name": "tradutor-overlay-pro",
+  "version": "2.0.0",
+  "description": "Tradutor overlay - Dark & Clean",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder --win --dir",
+    "build:portable": "electron-builder --win --dir",
+    "build:installer": "electron-builder --win nsis --x64",
+    "build:all": "electron-builder --win --x64"
+  },
+  "keywords": ["tradutor", "overlay", "electron"],
+  "author": "P4X",
+  "license": "MIT",
+  "build": {
+    "appId": "com.p4x.tradutor-overlay-pro",
+    "productName": "TradutorPro",
+    "copyright": "Copyright © 2024 P4X",
+    "win": {
+      "target": "dir",
+      "artifactName": "${productName}-${version}-Portable.${ext}"
+    },
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "compression": "normal",
+    "electronVersion": "28.3.3"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {}
+}

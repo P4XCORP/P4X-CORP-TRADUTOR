@@ -1,0 +1,123 @@
+═══════════════════════════════════════════════════════════
+  TRADUTOR PRO - COMANDOS DE BUILD
+═══════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────┐
+│ DESENVOLVIMENTO                                         │
+└─────────────────────────────────────────────────────────┘
+
+# Instalar dependências
+npm install
+
+# Executar em modo desenvolvimento
+npm start
+
+# Executar em modo dev (com console)
+npm run dev
+
+
+┌─────────────────────────────────────────────────────────┐
+│ BUILD PARA DISTRIBUIÇÃO                                 │
+└─────────────────────────────────────────────────────────┘
+
+# Build completo (portable + instalador)
+npm run build
+
+# Apenas versão portable
+npm run build:portable
+
+# Apenas instalador
+npm run build:installer
+
+# Build de tudo
+npm run build:all
+
+
+┌─────────────────────────────────────────────────────────┐
+│ SCRIPTS AUTOMATIZADOS                                   │
+└─────────────────────────────────────────────────────────┘
+
+# Build completo automatizado (Windows)
+build-release.bat
+
+# Início rápido (Windows)
+quick-start.bat
+
+
+┌─────────────────────────────────────────────────────────┐
+│ ESTRUTURA DE ARQUIVOS                                   │
+└─────────────────────────────────────────────────────────┘
+
+src/
+├── main-final.js      → Processo principal Electron
+└── tradutor.html      → Interface do usuário
+
+build/
+└── icon.ico           → Ícone do app (adicione aqui)
+
+dist/                  → Executáveis gerados (após build)
+
+
+┌─────────────────────────────────────────────────────────┐
+│ ARQUIVOS IMPORTANTES                                    │
+└─────────────────────────────────────────────────────────┘
+
+package.json              → Configuração do projeto
+BUILD-INSTRUCTIONS.md     → Instruções detalhadas de build
+DISTRIBUTION-GUIDE.md     → Guia de distribuição
+RELEASE-CHECKLIST.md      → Checklist antes de release
+README.md                 → Documentação do projeto
+LEIA-ME.txt              → Instruções para usuário final
+LICENSE.txt              → Licença MIT
+CHANGELOG.md             → Histórico de versões
+
+
+┌─────────────────────────────────────────────────────────┐
+│ TAMANHOS ESPERADOS                                      │
+└─────────────────────────────────────────────────────────┘
+
+Portable:    ~150-180 MB
+Instalador:  ~150-180 MB
+Instalado:   ~200-250 MB
+
+(Tamanho normal para apps Electron)
+
+
+┌─────────────────────────────────────────────────────────┐
+│ TEMPO DE BUILD                                          │
+└─────────────────────────────────────────────────────────┘
+
+Primeira vez:  5-10 minutos (baixa dependências)
+Subsequentes:  2-3 minutos
+
+
+┌─────────────────────────────────────────────────────────┐
+│ TROUBLESHOOTING                                         │
+└─────────────────────────────────────────────────────────┘
+
+Erro: "electron-builder not found"
+→ npm install electron-builder --save-dev
+
+Erro: "Cannot find module"
+→ npm install
+
+Build muito lento
+→ Normal na primeira vez, depois fica rápido
+
+Erro de permissão
+→ Execute terminal como administrador
+
+
+┌─────────────────────────────────────────────────────────┐
+│ PRÓXIMOS PASSOS                                         │
+└─────────────────────────────────────────────────────────┘
+
+1. npm install                    (instalar dependências)
+2. npm start                      (testar aplicativo)
+3. Adicionar icon.ico em build/   (opcional)
+4. npm run build                  (criar executáveis)
+5. Testar executáveis em dist/
+6. Distribuir!
+
+
+═══════════════════════════════════════════════════════════

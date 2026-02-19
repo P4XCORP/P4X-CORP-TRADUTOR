@@ -1,0 +1,19 @@
+ÍCONE DO APLICATIVO
+===================
+
+Para adicionar um ícone personalizado ao Tradutor Pro:
+
+1. Crie ou baixe um ícone no formato .ICO
+2. Tamanho recomendado: 256x256 pixels ou maior
+3. Salve como: build/icon.ico
+4. Execute o build novamente
+
+Ferramentas para criar ícones:
+- https://www.icoconverter.com/ (converter PNG para ICO)
+- https://www.favicon-generator.org/ (gerar ícone)
+- GIMP (software gratuito)
+- Photoshop
+
+Formato necessário: .ICO (Windows Icon)
+
+Se não adicionar um ícone personalizado, o Electron usará o ícone padrão.

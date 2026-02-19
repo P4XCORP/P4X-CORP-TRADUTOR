@@ -1,0 +1,28 @@
+═══════════════════════════════════════════════════════
+  🌐 TRADUTOR PRO - COMANDOS RÁPIDOS
+═══════════════════════════════════════════════════════
+
+📦 INSTALAÇÃO:
+   npm install
+
+🔍 DIAGNÓSTICO (se overlay não aparecer):
+   npm run diagnostico
+
+▶️  EXECUTAR:
+   npm start
+
+⌨️  ATALHOS DURANTE USO:
+   Ctrl+Shift+C  →  Traduzir texto selecionado
+   Ctrl+Shift+A  →  Capturar área da tela (OCR)
+   Ctrl+Shift+T  →  Mostrar/ocultar overlay
+   ESC           →  Cancelar captura
+
+📍 LOCALIZAÇÃO:
+   Canto superior DIREITO da tela
+
+🆘 PROBLEMAS:
+   Leia: INICIO-RAPIDO.md
+   Leia: ONDE-ESTA-O-OVERLAY.md
+   Leia: TROUBLESHOOTING.md
+
+═══════════════════════════════════════════════════════

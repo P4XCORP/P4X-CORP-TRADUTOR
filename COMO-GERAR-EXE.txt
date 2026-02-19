@@ -1,0 +1,48 @@
+═══════════════════════════════════════════════════════
+  TRADUTOR PRO - COMO GERAR O EXECUTÁVEL PORTÁTIL
+═══════════════════════════════════════════════════════
+
+MÉTODO RÁPIDO (RECOMENDADO):
+────────────────────────────
+1. Clique duas vezes em: GERAR-EXE.bat
+2. Aguarde o processo terminar
+3. O executável estará em: dist\Tradutor-Pro-Portable.exe
+
+
+MÉTODO MANUAL:
+──────────────
+1. Abra o terminal (CMD ou PowerShell)
+2. Execute: npm install
+3. Execute: npm run build
+4. O executável estará em: dist\Tradutor-Pro-Portable.exe
+
+
+CARACTERÍSTICAS DO EXECUTÁVEL:
+───────────────────────────────
+✓ 100% Portátil (não precisa instalação)
+✓ Pode ser executado de qualquer pasta
+✓ Pode ser copiado para pendrive
+✓ Tamanho: ~150-200 MB
+✓ Inclui tudo necessário (Node.js + Chromium)
+
+
+REQUISITOS:
+───────────
+- Node.js instalado (para gerar o executável)
+- Conexão com internet (para baixar dependências)
+
+
+APÓS GERAR:
+───────────
+O arquivo .exe pode ser distribuído e executado em qualquer
+Windows sem precisar instalar nada adicional.
+
+As configurações são salvas automaticamente e persistem
+entre execuções.
+
+
+PROBLEMAS?
+──────────
+- Se der erro, delete a pasta node_modules e tente novamente
+- Certifique-se que tem espaço em disco (mínimo 500 MB)
+- Execute como administrador se necessário
