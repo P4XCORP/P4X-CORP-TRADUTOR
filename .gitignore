@@ -12,4 +12,10 @@ build/icon.ico
 *.swo
 *~
 TradutorPro-v2.0-Portable/
+P4X-Tradutor-v2.0-Portable/
 src/index.html.backup
+*.dll
+*.pak
+*.dat
+*.bin
+*.asar
